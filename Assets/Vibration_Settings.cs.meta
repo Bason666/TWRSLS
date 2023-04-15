@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 78e0bbd73b617764f94768d343000048
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Vibrat1: {fileID: 21300000, guid: 9db2e04f92cd89e4d98e9e54250ac28b, type: 3}
+  - Vibrat2: {fileID: 21300000, guid: 4eb00974bc624914f83eb5476cf98da9, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

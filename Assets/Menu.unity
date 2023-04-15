@@ -450,7 +450,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &539825926
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1019,6 +1019,7 @@ GameObject:
   - component: {fileID: 1504748587}
   - component: {fileID: 1504748586}
   - component: {fileID: 1504748585}
+  - component: {fileID: 1504748588}
   m_Layer: 5
   m_Name: Volume
   m_TagString: Untagged
@@ -1091,13 +1092,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 539825925}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1504748588}
+        m_TargetAssemblyTypeName: Volume_Setting, Assembly-CSharp
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1141,6 +1142,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1504748583}
   m_CullTransparentMesh: 1
+--- !u!114 &1504748588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504748583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb32c605554f5e74c9b2cbd0e173ac5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Volume_ON: {fileID: 21300000, guid: dad31ef46cf1f534caf5ef83f9f76a7b, type: 3}
+  Volume_Off: {fileID: 21300000, guid: d1997f032fd47bc4bb3f9fbc3265f0bc, type: 3}
 --- !u!1 &1530517171
 GameObject:
   m_ObjectHideFlags: 0
@@ -1525,6 +1540,7 @@ GameObject:
   - component: {fileID: 2042646253}
   - component: {fileID: 2042646252}
   - component: {fileID: 2042646251}
+  - component: {fileID: 2042646254}
   m_Layer: 5
   m_Name: Vibration
   m_TagString: Untagged
@@ -1596,7 +1612,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2042646252}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2042646254}
+        m_TargetAssemblyTypeName: Vibration_Settings, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2042646252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1635,6 +1663,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2042646249}
   m_CullTransparentMesh: 1
+--- !u!114 &2042646254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042646249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78e0bbd73b617764f94768d343000048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibrat1: {fileID: 21300000, guid: 9db2e04f92cd89e4d98e9e54250ac28b, type: 3}
+  Vibrat2: {fileID: 21300000, guid: 4eb00974bc624914f83eb5476cf98da9, type: 3}
 --- !u!1 &2063827110
 GameObject:
   m_ObjectHideFlags: 0

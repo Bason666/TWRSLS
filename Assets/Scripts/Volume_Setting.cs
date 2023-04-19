@@ -8,25 +8,41 @@ public class Volume_Setting : MonoBehaviour
     public Sprite Volume_ON;
     public Sprite Volume_Off;
 
-    private Image volum;
+    public Image volum;
+    public AudioSource Musc;
+    public bool MuscOn;
     void Start()
     {
-        volum = GetComponent<Image>();
-        volum.sprite = Volume_ON;
+        MuscOn = true;
     }
-    public void OnClick()
+    
+    void Update()
     {
-
-        if (volum.sprite == Volume_ON)
+        if (PlayerPrefs.GetInt("music") == 0)
         {
-            volum.sprite = Volume_Off;
-            return;
+            volum.GetComponent<Image>().sprite = Volume_ON;
+            Musc.enabled = true;
+            MuscOn = true;
         }
-        if(volum.sprite == Volume_Off)
+        else if (PlayerPrefs.GetInt("music") == 1)
         {
-            volum.sprite = Volume_ON;
-            return;
+            volum.GetComponent<Image>().sprite = Volume_Off;
+            Musc.enabled = false;
+            MuscOn = false;
         }
     }
+
+    public void offSound()
+    {
+        if (!MuscOn)
+        {
+            PlayerPrefs.SetInt("music", 0);
+        }
+        else if (MuscOn)
+        {
+            PlayerPrefs.SetInt("music", 1);
+        }
+    }
+  
 
 }

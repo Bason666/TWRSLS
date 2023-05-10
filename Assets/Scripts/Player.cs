@@ -11,7 +11,6 @@ public class Player : MonoBehaviour
     private Vector2 moveVelocity;
     // Для ебаного сундука
     public string TagForChest;
- 
 
 
 
@@ -42,15 +41,39 @@ public class Player : MonoBehaviour
 
     //
 
-    // Сундук нахуй
+    // Сундук потрогали нахуй
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Chest"))
         {
             other.gameObject.tag = TagForChest;
-            
+            Casino();
+        }
+    }
+
+    // Сундуковое казино
+    public void Casino()
+    {
+        int caz = PlayerPrefs.GetInt("money"); // Получение кеша на руки, чтоб производить математические вычисления
+        int opit = PlayerPrefs.GetInt("experience"); // Получение опыта
+        int rand = Random.Range(0, 11); // Шанс 0-100% на выпадение лута
+        if (rand == 7) // шанс выпадения 10%
+        {
+            opit += 1;//пока хз сколько опыта
+        }
+        else if (rand > 7) // шанс выпадения 30% 
+        {
+            //на всякий оставлю cas = Random.Range(0, 70); - Казино
+            // выдача блядской хилки
+        }
+        else // Остальные 60%
+        {
+            caz += 30;
+            PlayerPrefs.GetInt("money", caz); // золото
+
         }
 
 
-    }
+
+    } 
 }

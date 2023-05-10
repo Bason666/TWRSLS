@@ -14,9 +14,12 @@ public class Player : MonoBehaviour
     // ƒл€ ебаного сундука
     public string TagForChest;
 
+    // ’п бар
+    public int health;
 
-
-
+    public Image heart3;
+    public Image heart2;
+    public Image heart1;
 
 
     // ќсновной код персонажа
@@ -37,7 +40,7 @@ public class Player : MonoBehaviour
 
     }
 
-   // —юда код анимации
+    // —юда код анимации
 
 
     //
@@ -45,7 +48,7 @@ public class Player : MonoBehaviour
     // —ундук потрогали нахуй
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("Chest"))
+        if (other.CompareTag("Chest"))
         {
             other.gameObject.tag = TagForChest;
             Casino();
@@ -75,8 +78,42 @@ public class Player : MonoBehaviour
         }
         caz = 0;
         opit = 0;
-    } 
+    }
+    // ’п персонажа
+    public void ChangeHealth(int healthValue)
+    {
+        health += healthValue; // получаемый урон/лечение
 
+        // отображение хп
+        if (health < 30)
+            heart3.enabled = false;
+        else
+            heart3.enabled = true;
+        if (health < 20)
+        {
+            heart3.enabled = false;
+            heart2.enabled = false;
+        }
+        else
+        {
+            heart3.enabled = true;
+            heart2.enabled = true;
+        }
+        if (health < 10)
+        {
+            heart3.enabled = false;
+            heart2.enabled = false;
+            heart1.enabled = false;
+        }
+        else
+        {
+            heart3.enabled = true;
+            heart2.enabled = true;
+            heart1.enabled = true;
+        }
+          
+        
+    }
 
 
 

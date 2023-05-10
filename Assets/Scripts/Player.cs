@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
@@ -11,7 +13,6 @@ public class Player : MonoBehaviour
     private Vector2 moveVelocity;
     // Для ебаного сундука
     public string TagForChest;
-
 
 
 
@@ -60,6 +61,7 @@ public class Player : MonoBehaviour
         if (rand == 7) // шанс выпадения 10%
         {
             opit += 1;//пока хз сколько опыта
+            PlayerPrefs.SetInt("experience", opit);
         }
         else if (rand > 7) // шанс выпадения 30% 
         {
@@ -69,11 +71,20 @@ public class Player : MonoBehaviour
         else // Остальные 60%
         {
             caz += 30;
-            PlayerPrefs.GetInt("money", caz); // золото
-
+            PlayerPrefs.SetInt("money", caz); // золото
         }
-
-
-
+        caz = 0;
+        opit = 0;
     } 
+
+
+
+
+
+
+
+
+
+
+
 }

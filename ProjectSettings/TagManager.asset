@@ -8,6 +8,8 @@ TagManager:
   - Block
   - Wall
   - RoomPoint
+  - Chest
+  - Chest_Destroy
   layers:
   - Default
   - TransparentFX

@@ -9,12 +9,22 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private Vector2 moveVelocity;
+    // Для ебаного сундука
+    public string TagForChest;
+ 
+
+
+
+
+
+
+
+    // Основной код персонажа
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         moveInput = new Vector2(joystick.Horizontal, joystick.Vertical);
@@ -24,6 +34,23 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
+
+    }
+
+   // Сюда код анимации
+
+
+    //
+
+    // Сундук нахуй
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.CompareTag("Chest"))
+        {
+            other.gameObject.tag = TagForChest;
+            
+        }
+
 
     }
 }

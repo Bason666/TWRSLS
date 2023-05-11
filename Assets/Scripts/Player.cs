@@ -16,7 +16,8 @@ public class Player : MonoBehaviour
 
     // Хп бар
     public int health;
-
+    public Image heart5;
+    public Image heart4;
     public Image heart3;
     public Image heart2;
     public Image heart1;
@@ -25,13 +26,25 @@ public class Player : MonoBehaviour
     // Основной код персонажа
     void Start()
     {
+        PlayerPrefs.SetInt("MaxHealth", 0);
         rb = GetComponent<Rigidbody2D>();
+
     }
 
     void Update()
     {
         moveInput = new Vector2(joystick.Horizontal, joystick.Vertical);
         moveVelocity = moveInput.normalized * speed;
+        // Отображение хп
+        if ((health < 50) || (PlayerPrefs.GetInt("MaxHealth") == 2))
+            heart5.enabled = false;
+        else
+            heart5.enabled = true;
+
+        if ((health < 40) || (PlayerPrefs.GetInt("MaxHealth") == 1))
+            heart4.enabled = false;
+        else
+            heart4.enabled = true;
     }
 
     void FixedUpdate()
@@ -63,13 +76,12 @@ public class Player : MonoBehaviour
         int rand = Random.Range(0, 11); // Шанс 0-100% на выпадение лута
         if (rand == 7) // шанс выпадения 10%
         {
-            opit += 1;//пока хз сколько опыта
+            opit += 10;
             PlayerPrefs.SetInt("experience", opit);
         }
         else if (rand > 7) // шанс выпадения 30% 
         {
-            //на всякий оставлю cas = Random.Range(0, 70); - Казино
-            // выдача блядской хилки
+            ChangeHealth(20);
         }
         else // Остальные 60%
         {
@@ -89,29 +101,18 @@ public class Player : MonoBehaviour
             heart3.enabled = false;
         else
             heart3.enabled = true;
+
         if (health < 20)
-        {
-            heart3.enabled = false;
             heart2.enabled = false;
-        }
         else
-        {
-            heart3.enabled = true;
             heart2.enabled = true;
-        }
+
         if (health < 10)
-        {
-            heart3.enabled = false;
-            heart2.enabled = false;
             heart1.enabled = false;
-        }
         else
-        {
-            heart3.enabled = true;
-            heart2.enabled = true;
             heart1.enabled = true;
-        }
-          
+        
+        
         
     }
 

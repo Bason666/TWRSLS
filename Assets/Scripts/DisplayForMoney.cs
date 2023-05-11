@@ -10,6 +10,10 @@ public class DisplayForMoney : MonoBehaviour
     public TMP_Text DisplayOpit;
 
 
+    void Start()
+    {
+        PlayerPrefs.SetInt("money", 0);
+    }
     void Update()
     {
         DisplayMoney.text = PlayerPrefs.GetInt("money").ToString();

@@ -7864,9 +7864,11 @@ MonoBehaviour:
   joystick: {fileID: 726302805}
   TagForChest: Chest_Destroy
   health: 30
+  heart5: {fileID: 5137256}
+  heart4: {fileID: 1789353954}
   heart3: {fileID: 1413662033}
-  heart2: {fileID: 0}
-  heart1: {fileID: 0}
+  heart2: {fileID: 655783255}
+  heart1: {fileID: 967878961}
 --- !u!212 &2090052458
 SpriteRenderer:
   m_ObjectHideFlags: 0

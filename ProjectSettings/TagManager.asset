@@ -10,6 +10,7 @@ TagManager:
   - RoomPoint
   - Chest
   - Chest_Destroy
+  - Rooms
   layers:
   - Default
   - TransparentFX

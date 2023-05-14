@@ -1976,8 +1976,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1233182570}
   - component: {fileID: 1233182569}
-  - component: {fileID: 1233182568}
   - component: {fileID: 1233182567}
+  - component: {fileID: 1233182568}
   - component: {fileID: 1233182566}
   m_Layer: 3
   m_Name: Enemy
@@ -1998,8 +1998,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a1bb0ac533636241806a24b0971dd81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
-  speed: 4
+  health: 20
+  speed: 3
 --- !u!70 &1233182567
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -2014,7 +2014,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.75, y: 0.55}
+  m_Size: {x: 0.4, y: 0.5}
   m_Direction: 1
 --- !u!50 &1233182568
 Rigidbody2D:
@@ -4274,7 +4274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32716e6961611eb4d914ddfab650d0d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 4
   joystick: {fileID: 726302805}
   TagForChest: Chest_Destroy
   health: 30

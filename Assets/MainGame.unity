@@ -4367,6 +4367,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 2472600644637657111, guid: 52efa21896378b1409f0978e11a96631, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2472600644637657111, guid: 52efa21896378b1409f0978e11a96631, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 23.01
+      objectReference: {fileID: 0}
     - target: {fileID: 3492832361313654135, guid: 52efa21896378b1409f0978e11a96631, type: 3}
       propertyPath: m_Name
       value: MainRoom
@@ -4422,6 +4430,50 @@ PrefabInstance:
     - target: {fileID: 5548253883596505167, guid: 52efa21896378b1409f0978e11a96631, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7363679752936474881, guid: 52efa21896378b1409f0978e11a96631, type: 3}
+      propertyPath: cameraChangePos.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7363679752936474881, guid: 52efa21896378b1409f0978e11a96631, type: 3}
+      propertyPath: cameraChangePos.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7363679752936474881, guid: 52efa21896378b1409f0978e11a96631, type: 3}
+      propertyPath: playerChangePos.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7363679752936474881, guid: 52efa21896378b1409f0978e11a96631, type: 3}
+      propertyPath: playerChangePos.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7363679753558519957, guid: 52efa21896378b1409f0978e11a96631, type: 3}
+      propertyPath: playerChangePos.x
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7363679754427658829, guid: 52efa21896378b1409f0978e11a96631, type: 3}
+      propertyPath: cameraChangePos.x
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 7363679754427658829, guid: 52efa21896378b1409f0978e11a96631, type: 3}
+      propertyPath: playerChangePos.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7363679754658930289, guid: 52efa21896378b1409f0978e11a96631, type: 3}
+      propertyPath: cameraChangePos.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7363679754658930289, guid: 52efa21896378b1409f0978e11a96631, type: 3}
+      propertyPath: cameraChangePos.y
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7363679754658930289, guid: 52efa21896378b1409f0978e11a96631, type: 3}
+      propertyPath: playerChangePos.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7363679754658930289, guid: 52efa21896378b1409f0978e11a96631, type: 3}
+      propertyPath: playerChangePos.y
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 7943416109676069483, guid: 52efa21896378b1409f0978e11a96631, type: 3}
       propertyPath: direction

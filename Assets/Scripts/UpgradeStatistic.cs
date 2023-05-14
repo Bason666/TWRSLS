@@ -28,7 +28,7 @@ public class UpgradeStatistic : MonoBehaviour
             Health.interactable = false;
             HB.sprite = bar2;
         }
-        else if (PlayerPrefs.GetInt("bonusHealth") == 1)
+        else if (PlayerPrefs.GetInt("BonusHealth") == 1)
             HB.sprite = bar1;
 
         if (PlayerPrefs.GetInt("BonusSpeed") == 2)

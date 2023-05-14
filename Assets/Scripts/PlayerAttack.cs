@@ -13,16 +13,16 @@ public class PlayerAttack : MonoBehaviour
     public int damage;
     public Animator anim;
 
-    private bool at;
+   // private bool at;
     
     public void attackClicked()
     {
-        at = true;
+       // at = true;
     }
 
     void Start()
     {
-        
+       
     }
 
   
@@ -30,7 +30,7 @@ public class PlayerAttack : MonoBehaviour
     {
         if (timeBtwAttack <= 0)
         {
-            if (at == true)
+            if (Input.GetMouseButton(0))
             {
 
                 Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPos.position, attackRange, enemy);

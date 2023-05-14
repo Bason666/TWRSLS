@@ -4277,7 +4277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   joystick: {fileID: 726302805}
-  animator: {fileID: 0}
+  animator: {fileID: 2090052461}
   TagForChest: Chest_Destroy
   health: 30
   heart5: {fileID: 5137256}

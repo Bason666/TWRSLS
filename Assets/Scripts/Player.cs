@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private Vector2 moveVelocity;
+    public Animator animator;
     // Для ебаного сундука
     public string TagForChest;
 
@@ -28,6 +29,7 @@ public class Player : MonoBehaviour
     // Основной код персонажа
     void Start()
     {
+        animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         // Прокачка
         // хп
@@ -72,7 +74,15 @@ public class Player : MonoBehaviour
     {
         moveInput = new Vector2(joystick.Horizontal, joystick.Vertical);
         moveVelocity = moveInput.normalized * (speed + ms);
-        
+
+        if (moveInput.x == 0)
+        {
+            animator.SetBool("isRunning", false);
+        }
+        else
+        {
+            animator.SetBool("isRunning", true);
+        }
     }
 
     void FixedUpdate()
@@ -82,7 +92,6 @@ public class Player : MonoBehaviour
     }
 
     // Сюда код анимации
-
 
     //
 

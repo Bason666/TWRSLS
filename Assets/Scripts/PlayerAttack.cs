@@ -38,13 +38,14 @@ public class PlayerAttack : MonoBehaviour
                 {
                     enemies[i].GetComponent<Enemy>().TakeDamage(damage);
                 }
+                at = false;
             }
             timeBtwAttack = startTimeBtwAttack;
         }
         else
             timeBtwAttack -= Time.deltaTime;
-       
 
+        
     }
 
     private void OnDrawGizmosSelected()

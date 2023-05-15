@@ -9,8 +9,12 @@ public class Enemy : MonoBehaviour
     private Player player;
     int coins;
     int bonus;
-
-
+    public int enemyDamage;
+    private float timeBtwAttack;
+    public float startTimeBtwAttack;
+    public Transform attackPos;
+    public LayerMask igrok;
+    public float attackRange;
     private void Start()
     {
         player = FindObjectOfType<Player>();
@@ -20,6 +24,7 @@ public class Enemy : MonoBehaviour
             bonus = 1;
         else
             bonus = 0;
+
     }
     
     private void Update()
@@ -33,10 +38,26 @@ public class Enemy : MonoBehaviour
             coins = 0;
         }
        
-
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
 
+        if (timeBtwAttack <= 0)
+        {
+                Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPos.position, attackRange, igrok);
+            for (int i = 0; i < enemies.Length; i++)
+            {
+                enemies[i].GetComponent<Player>().ChangeHealth(-enemyDamage);
+            }
+                timeBtwAttack = startTimeBtwAttack;
+        }
+        else
+            timeBtwAttack -= Time.deltaTime;
 
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(attackPos.position, attackRange);
     }
     public void TakeDamage(int damage)
     {
@@ -44,4 +65,9 @@ public class Enemy : MonoBehaviour
 
 
     }
+
+
+
+
+
 }

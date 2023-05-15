@@ -66,8 +66,6 @@ public class Player : MonoBehaviour
         else
             gold = 0;
 
-
-
     }
 
     void Update()

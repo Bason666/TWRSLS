@@ -10,5 +10,6 @@ public class ResetBonus : MonoBehaviour
         PlayerPrefs.SetInt("BonusSoul", 0);
         PlayerPrefs.SetInt("BonusGold", 0);
         PlayerPrefs.SetInt("BonusSpeed", 0);
+        PlayerPrefs.SetInt("experience", 0);
     }
 }

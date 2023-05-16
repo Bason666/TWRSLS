@@ -81,6 +81,13 @@ public class Player : MonoBehaviour
         {
             animator.SetBool("isRunning", true);
         }
+        if (health <= 0)
+            Destroy(gameObject);
+
+
+
+
+
     }
 
     void FixedUpdate()
@@ -157,8 +164,6 @@ public class Player : MonoBehaviour
             heart1.enabled = false;
         else
             heart1.enabled = true;
-        
-        
         
     }
 

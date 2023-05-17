@@ -82,8 +82,12 @@ public class Player : MonoBehaviour
             animator.SetBool("isRunning", true);
         }
         if (health <= 0)
+        {
             Destroy(gameObject);
-
+            PlayerPrefs.SetInt("ggDead", 1);
+        }
+        else
+            PlayerPrefs.SetInt("ggDead", 0);
 
 
 

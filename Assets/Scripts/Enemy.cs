@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class Enemy : MonoBehaviour
     public Transform attackPos;
     public LayerMask igrok;
     public float attackRange;
+    public Button MagicB;
     private void Start()
     {
         player = FindObjectOfType<Player>();
@@ -29,6 +31,16 @@ public class Enemy : MonoBehaviour
     
     private void Update()
     {
+        if ((health <= 10))
+        {
+            MagicB.interactable = true;
+        }
+        else
+        {
+            MagicB.interactable = false;
+        }
+
+
         if (health <= 0)
         {
             Destroy(gameObject);

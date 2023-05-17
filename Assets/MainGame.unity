@@ -2137,6 +2137,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   attackRange: 0.54
+  MagicB: {fileID: 1564765011}
 --- !u!70 &1233182567
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -2512,6 +2513,61 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1285479835}
   m_CullTransparentMesh: 1
+--- !u!1 &1320403360
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1320403361}
+  - component: {fileID: 1320403362}
+  m_Layer: 6
+  m_Name: magicP
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1320403361
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320403360}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2090052459}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1320403362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320403360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61447b9b362b8be4ca44b89680145369, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1564765012}
+  sprite1: {fileID: 21300000, guid: e9fbe59be400cc045b5b318d6f042b7d, type: 3}
+  sprite2: {fileID: 21300000, guid: 8547231269f42544595b708df230f1e3, type: 3}
+  startTimeBtwAttack: 0.1
+  attackPos: {fileID: 1320403361}
+  enemy:
+    serializedVersion: 2
+    m_Bits: 8
+  attackRange: 1.5
+  damage: 20
+  anim: {fileID: 0}
 --- !u!1 &1328031268
 GameObject:
   m_ObjectHideFlags: 0
@@ -3257,7 +3313,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1564765012}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1320403362}
+        m_TargetAssemblyTypeName: PlayerMagic, Assembly-CSharp
+        m_MethodName: ZahvatSoulClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1320403362}
+        m_TargetAssemblyTypeName: PlayerMagic, Assembly-CSharp
+        m_MethodName: CastClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1564765012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4519,6 +4599,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 970512663}
+  - {fileID: 1320403361}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

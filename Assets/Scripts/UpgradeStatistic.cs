@@ -58,7 +58,7 @@ public class UpgradeStatistic : MonoBehaviour
 
     public void HealthClicked()
     {
-        if (PlayerPrefs.GetInt("experience") > 10)
+        if (PlayerPrefs.GetInt("experience") >= 10)
         {
             Calculator(10);
             if (HB.sprite == bar1)
@@ -76,7 +76,7 @@ public class UpgradeStatistic : MonoBehaviour
     }
     public void SpeedClicked()
     {
-        if (PlayerPrefs.GetInt("experience") > 10)
+        if (PlayerPrefs.GetInt("experience") >= 10)
         {
             Calculator(10);
             if (SB.sprite == bar1)
@@ -95,7 +95,7 @@ public class UpgradeStatistic : MonoBehaviour
     }
     public void GoldClicked()
     {
-        if (PlayerPrefs.GetInt("experience") > 20)
+        if (PlayerPrefs.GetInt("experience") >= 20)
         {
             Calculator(20);
             if (GB.sprite == bar1)
@@ -113,7 +113,7 @@ public class UpgradeStatistic : MonoBehaviour
     }
     public void SoulClicked()
     {
-        if (PlayerPrefs.GetInt("experience") > 20)
+        if (PlayerPrefs.GetInt("experience") >= 20)
         {
             Calculator(20);
             if (SoB.sprite == bar1)

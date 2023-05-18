@@ -13,9 +13,9 @@ public class Enemy : MonoBehaviour
     public int enemyDamage;
     private float timeBtwAttack;
     public float startTimeBtwAttack;
-    public Transform attackPos;
+    public Transform attackPos1;
     public LayerMask igrok;
-    public float attackRange;
+    public float attackRangeEnemy;
     public Button MagicB;
     private void Start()
     {
@@ -54,7 +54,7 @@ public class Enemy : MonoBehaviour
 
         if (timeBtwAttack <= 0)
         {
-                Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPos.position, attackRange, igrok);
+                Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPos1.position, attackRangeEnemy, igrok);
             for (int i = 0; i < enemies.Length; i++)
             {
                 enemies[i].GetComponent<Player>().ChangeHealth(-enemyDamage);
@@ -69,7 +69,7 @@ public class Enemy : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(attackPos.position, attackRange);
+        Gizmos.DrawWireSphere(attackPos1.position, attackRangeEnemy);
     }
     public void TakeDamage(int damage)
     {

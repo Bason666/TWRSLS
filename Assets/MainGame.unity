@@ -1831,7 +1831,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1017142466}
   m_Layer: 3
-  m_Name: attackPos
+  m_Name: attackPos1
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -2131,12 +2131,12 @@ MonoBehaviour:
   health: 20
   speed: 3
   enemyDamage: 5
-  startTimeBtwAttack: 5
-  attackPos: {fileID: 1017142466}
+  startTimeBtwAttack: 2
+  attackPos1: {fileID: 1017142466}
   igrok:
     serializedVersion: 2
     m_Bits: 64
-  attackRange: 0.54
+  attackRangeEnemy: 0.62
   MagicB: {fileID: 1564765011}
 --- !u!70 &1233182567
 CapsuleCollider2D:
@@ -3571,6 +3571,10 @@ MonoBehaviour:
   - {fileID: 3492832361313654135, guid: daa002f8bd8dba34bbfae769c9138a39, type: 3}
   - {fileID: 3492832361313654135, guid: 9d65b01c9809ce74185e69251866cf26, type: 3}
   - {fileID: 3492832361313654135, guid: 75d0d305e0660834e9dc60bcc4d7ed7b, type: 3}
+  MidTopRoom: []
+  MidBotRoom: []
+  MidRightRoom: []
+  MidLiftRoom: []
 --- !u!4 &1680041050
 Transform:
   m_ObjectHideFlags: 0

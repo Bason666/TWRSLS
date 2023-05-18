@@ -16,7 +16,8 @@ public class Enemy : MonoBehaviour
     public Transform attackPos1;
     public LayerMask igrok;
     public float attackRangeEnemy;
-    public Button MagicB;
+    // public Button MagicB;
+    public bool Boss;
     private void Start()
     {
         player = FindObjectOfType<Player>();
@@ -31,23 +32,33 @@ public class Enemy : MonoBehaviour
     
     private void Update()
     {
-        if ((health <= 10))
-        {
-            MagicB.interactable = true;
-        }
-        else
-        {
-            MagicB.interactable = false;
-        }
+      //  if ((health <= 10))
+      //  {
+      //      MagicB.interactable = true;
+      //  }
+      //  else
+       // {
+        //    MagicB.interactable = false;
+       // }
 
 
         if (health <= 0)
         {
             Destroy(gameObject);
-            coins = PlayerPrefs.GetInt("money");
-            coins += 5 + bonus;
-            PlayerPrefs.SetInt("money", coins);
-            coins = 0;
+            if (!Boss)
+            {
+                coins = PlayerPrefs.GetInt("money");
+                coins += 5 + bonus;
+                PlayerPrefs.SetInt("money", coins);
+                coins = 0;
+            }
+            else
+            {
+                coins = PlayerPrefs.GetInt("experience");
+                coins += 15 ;
+                PlayerPrefs.SetInt("experience", coins);
+                coins = 0;
+            }
         }
        
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);

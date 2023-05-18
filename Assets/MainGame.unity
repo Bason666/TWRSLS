@@ -995,37 +995,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 461254560}
   m_CullTransparentMesh: 1
---- !u!1 &514598308
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 514598309}
-  m_Layer: 0
-  m_Name: AttackPosBoss
-  m_TagString: Untagged
-  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &514598309
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 514598308}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.962, y: 0.144, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2099289827}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &536766186
 GameObject:
   m_ObjectHideFlags: 0
@@ -2154,7 +2123,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1233182565}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a1bb0ac533636241806a24b0971dd81, type: 3}
   m_Name: 
@@ -2163,7 +2132,6 @@ MonoBehaviour:
   speed: 3
   enemyDamage: 5
   startTimeBtwAttack: 2
-  attackPos1: {fileID: 1017142466}
   igrok:
     serializedVersion: 2
     m_Bits: 64
@@ -4873,7 +4841,9 @@ GameObject:
   - component: {fileID: 2099289824}
   - component: {fileID: 2099289829}
   - component: {fileID: 2099289828}
+  - component: {fileID: 2099289832}
   - component: {fileID: 2099289830}
+  - component: {fileID: 2099289831}
   m_Layer: 3
   m_Name: Boss
   m_TagString: Enemy
@@ -4965,8 +4935,7 @@ Transform:
   m_LocalPosition: {x: 0.855, y: -2.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 514598309}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4983,9 +4952,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.09130885, y: 1.0742235}
+  m_Offset: {x: -0.12324846, y: 1.0742235}
   serializedVersion: 2
-  m_Radius: 0.5096631
+  m_Radius: 0.47772372
 --- !u!70 &2099289829
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -5016,14 +4985,49 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 50
   speed: 2
-  enemyDamage: 10
+  enemyDamage: 1
   startTimeBtwAttack: 3
-  attackPos1: {fileID: 514598309}
   igrok:
     serializedVersion: 2
     m_Bits: 64
   attackRangeEnemy: 1.26
   Boss: 1
+--- !u!95 &2099289831
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099289823}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 875ce6fc60cd62940a0a6e40e874170a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!58 &2099289832
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099289823}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.9688307, y: 0.255517}
+  serializedVersion: 2
+  m_Radius: 1.110263
 --- !u!1 &2099975702
 GameObject:
   m_ObjectHideFlags: 0

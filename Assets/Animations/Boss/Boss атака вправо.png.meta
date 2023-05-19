@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3350c617f2e09d3469ff6ea7d8413a11
+guid: c8530d860246c7b4aa4ccaa83c999c19
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 20
+  spritePixelsToUnits: 10
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -129,7 +129,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u0421\u043B\u0430\u0439\u043C \u0434\u0432\u0438\u0436. \u0432\u043B\u0435\u0432\u043E-Sheet_0"
+      name: "Boss \u0430\u0442\u0430\u043A\u0430 \u0432\u043F\u0440\u0430\u0432\u043E_0"
       rect:
         serializedVersion: 2
         x: 0
@@ -143,14 +143,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df15ae538948e0a47a87b5989f40a30d
-      internalID: 1472040475
+      spriteID: 7088bfdf4fe7cd54f893f405c40aff33
+      internalID: 684081200
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u0421\u043B\u0430\u0439\u043C \u0434\u0432\u0438\u0436. \u0432\u043B\u0435\u0432\u043E-Sheet_1"
+      name: "Boss \u0430\u0442\u0430\u043A\u0430 \u0432\u043F\u0440\u0430\u0432\u043E_1"
       rect:
         serializedVersion: 2
         x: 32
@@ -164,14 +164,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7300da7d5b0e66949bcca3eaa1a0542d
-      internalID: 1364990793
+      spriteID: 7257c389b298f3b46ba7410b0f5f2109
+      internalID: -2697570
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u0421\u043B\u0430\u0439\u043C \u0434\u0432\u0438\u0436. \u0432\u043B\u0435\u0432\u043E-Sheet_2"
+      name: "Boss \u0430\u0442\u0430\u043A\u0430 \u0432\u043F\u0440\u0430\u0432\u043E_2"
       rect:
         serializedVersion: 2
         x: 64
@@ -185,14 +185,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e836e42f9d58a854fb36fe46094de3bc
-      internalID: -1251096836
+      spriteID: d12d145411deee744b6225d2d0b18184
+      internalID: 138713921
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u0421\u043B\u0430\u0439\u043C \u0434\u0432\u0438\u0436. \u0432\u043B\u0435\u0432\u043E-Sheet_3"
+      name: "Boss \u0430\u0442\u0430\u043A\u0430 \u0432\u043F\u0440\u0430\u0432\u043E_3"
       rect:
         serializedVersion: 2
         x: 96
@@ -206,71 +206,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94d54679bed23424bb37fe9a7358d721
-      internalID: 2077805934
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u0421\u043B\u0430\u0439\u043C \u0434\u0432\u0438\u0436. \u0432\u043B\u0435\u0432\u043E-Sheet_4"
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3adb583dccb78344884083e1387eca59
-      internalID: -1663926312
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u0421\u043B\u0430\u0439\u043C \u0434\u0432\u0438\u0436. \u0432\u043B\u0435\u0432\u043E-Sheet_5"
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c9866878abed4ae45938ca4eb431bb56
-      internalID: 1988899460
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u0421\u043B\u0430\u0439\u043C \u0434\u0432\u0438\u0436. \u0432\u043B\u0435\u0432\u043E-Sheet_6"
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 794786b11dc042a40b893f590f1947c9
-      internalID: -1158277654
+      spriteID: 944d4ab3afcf0e54198ada72eff5e738
+      internalID: 1180759956
       vertices: []
       indices: 
       edges: []
@@ -286,13 +223,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "\u0421\u043B\u0430\u0439\u043C \u0434\u0432\u0438\u0436. \u0432\u043B\u0435\u0432\u043E-Sheet_6": -1158277654
-      "\u0421\u043B\u0430\u0439\u043C \u0434\u0432\u0438\u0436. \u0432\u043B\u0435\u0432\u043E-Sheet_0": 1472040475
-      "\u0421\u043B\u0430\u0439\u043C \u0434\u0432\u0438\u0436. \u0432\u043B\u0435\u0432\u043E-Sheet_5": 1988899460
-      "\u0421\u043B\u0430\u0439\u043C \u0434\u0432\u0438\u0436. \u0432\u043B\u0435\u0432\u043E-Sheet_4": -1663926312
-      "\u0421\u043B\u0430\u0439\u043C \u0434\u0432\u0438\u0436. \u0432\u043B\u0435\u0432\u043E-Sheet_1": 1364990793
-      "\u0421\u043B\u0430\u0439\u043C \u0434\u0432\u0438\u0436. \u0432\u043B\u0435\u0432\u043E-Sheet_3": 2077805934
-      "\u0421\u043B\u0430\u0439\u043C \u0434\u0432\u0438\u0436. \u0432\u043B\u0435\u0432\u043E-Sheet_2": -1251096836
+      "Boss \u0430\u0442\u0430\u043A\u0430 \u0432\u043F\u0440\u0430\u0432\u043E_0": 684081200
+      "Boss \u0430\u0442\u0430\u043A\u0430 \u0432\u043F\u0440\u0430\u0432\u043E_1": -2697570
+      "Boss \u0430\u0442\u0430\u043A\u0430 \u0432\u043F\u0440\u0430\u0432\u043E_2": 138713921
+      "Boss \u0430\u0442\u0430\u043A\u0430 \u0432\u043F\u0440\u0430\u0432\u043E_3": 1180759956
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

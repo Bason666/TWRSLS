@@ -32,7 +32,7 @@ public class PlayerAttack : MonoBehaviour
         {
             if (at == true)
             {
-
+                anim.SetTrigger("Attack");
                 Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPos.position, attackRange, enemy);
                 for (int i = 0; i < enemies.Length; i++)
                 {

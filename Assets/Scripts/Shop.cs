@@ -9,7 +9,7 @@ public class Shop : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        canvas = GetComponent<Canvas>();
+        canvas =  GameObject.Find("Shop").GetComponent<Canvas>();
     }
 
    public void OnTriggerEnter2D(Collider2D other)

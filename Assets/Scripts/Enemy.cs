@@ -14,7 +14,6 @@ public class Enemy : MonoBehaviour
     private float timeBtwAttack;
     public float startTimeBtwAttack;
     public LayerMask igrok;
-    public float attackRangeEnemy;
     public bool Boss;
 
     private Animator anim;
@@ -76,9 +75,8 @@ public class Enemy : MonoBehaviour
 
     public void OnEnemyAttack()
     {
-        player.GetComponent<Player>().ChangeHealth(-enemyDamage);
-       // player.health -= enemyDamage;
         timeBtwAttack = startTimeBtwAttack;
+        player.GetComponent<Player>().ChangeHealth(-enemyDamage);
     }
     public void TakeDamage(int damage)
     {

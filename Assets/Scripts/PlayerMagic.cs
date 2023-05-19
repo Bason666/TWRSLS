@@ -11,6 +11,7 @@ public class PlayerMagic : MonoBehaviour
     private float timeBtwAttack;
     public float startTimeBtwAttack;
     int count = 0;
+    public Button knopka;
 
     public Transform attackPos;
     public LayerMask enemy;
@@ -23,21 +24,61 @@ public class PlayerMagic : MonoBehaviour
     void Start()
     {
         button = GameObject.Find("Magic").GetComponent<Image>();
+
+        if (PlayerPrefs.GetInt("BonusSoul") == 2)
+        {
+            count = 100;
+        }
+        else if (PlayerPrefs.GetInt("BonusSoul") == 1)
+        {
+            count = 10;
+        }
+
     }
     public void ZahvatSoulClicked()
     {
         button.sprite = sprite1;
         count++;
+        Debug.Log(count);
     }
     public void CastClicked()
     {
-        if((count == 2) && (button.sprite == sprite1))
+        //нулевой
+        if ((count == 2) && (button.sprite == sprite1))
         {
             mgc = true;
             button.sprite = sprite2;
+            knopka.interactable = false;
             count = 0;
         }
-
+        // 1 уровень
+        if ((count == 12) && (button.sprite == sprite1))
+        {
+            mgc = true;
+        }
+        if ((count == 13) && (button.sprite == sprite1))
+        {
+            mgc = true;
+            button.sprite = sprite2;
+            knopka.interactable = false;
+            count = 10;
+        }
+        // 2 уровень
+        if ((count == 102) && (button.sprite == sprite1))
+        {
+            mgc = true;
+        }
+        if ((count == 103) && (button.sprite == sprite1))
+        {
+            mgc = true;
+        }
+        if ((count == 104) && (button.sprite == sprite1))
+        {
+            mgc = true;
+            button.sprite = sprite2;
+            knopka.interactable = false;
+            count = 100;
+        }
     }
 
     void Update()

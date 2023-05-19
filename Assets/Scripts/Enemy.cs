@@ -64,7 +64,19 @@ public class Enemy : MonoBehaviour
         {
             if (timeBtwAttack <= 0)
             {
-                anim.SetTrigger("EnemyAttack");
+                if (Boss)
+                {
+                    int Rand = Random.Range(0, 11);
+                    if (Rand == 1)
+                    {
+                        Debug.Log("Ульта босса");
+                        timeBtwAttack = startTimeBtwAttack;
+                    }
+                    else
+                        anim.SetTrigger("EnemyAttack");
+                }
+                else
+                    anim.SetTrigger("EnemyAttack");
             }
             else
             {
@@ -77,6 +89,12 @@ public class Enemy : MonoBehaviour
     {
         timeBtwAttack = startTimeBtwAttack;
         player.GetComponent<Player>().ChangeHealth(-enemyDamage);
+    }
+
+    public void AttackBoss()
+    {
+        timeBtwAttack = startTimeBtwAttack;
+        player.GetComponent<Player>().ChangeHealth(-10);
     }
     public void TakeDamage(int damage)
     {

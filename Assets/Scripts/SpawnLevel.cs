@@ -4,15 +4,33 @@ using UnityEngine;
 
 public class SpawnLevel : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public bool RoomBoosSpawned;
+    public bool RoomShopSpawned;
+    public int RoomCount;
+
+    public RoomSpawner RSC;
+
+
     void Start()
     {
-        
+        RoomBoosSpawned = false;
+        RoomShopSpawned = false;
+        RoomCount = 0;
+        PlayerPrefs.SetInt("RC", 0);
+        Debug.Log("намскхк");
     }
-
-    // Update is called once per frame
-    void Update()
+    public void CountsRoom(int variable)
     {
-        
+        RoomCount += variable;
+        //  RSC.CountRoom(RoomCount);
+        PlayerPrefs.SetInt("RC", RoomCount);
     }
+  //  private void Update()
+  //  {
+    //   if (RoomCount != 4)
+      //  {
+     //       RSC = GameObject.Find("Spawnpoint").GetComponent<RoomSpawner>();
+     //   }
+  //  }
+
 }

@@ -24,7 +24,7 @@ public class SoulCatch : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
            
-        if (collision.gameObject.GetComponent<Player>())
+        if (collision.gameObject.GetComponent<Enemy>())
         {
             hp = (GameObject.FindGameObjectWithTag("Enemy").GetComponent<Enemy>().health);
             if (hp <= 10)
@@ -37,7 +37,7 @@ public class SoulCatch : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<Player>())
+        if (collision.gameObject.GetComponent<Enemy>())
         {
             if(button.sprite == texturka1)
             { 

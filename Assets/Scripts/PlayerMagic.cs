@@ -10,6 +10,7 @@ public class PlayerMagic : MonoBehaviour
     public Sprite sprite2;
     private float timeBtwAttack;
     public float startTimeBtwAttack;
+    
     int count = 0;
     public Button knopka;
 
@@ -18,13 +19,14 @@ public class PlayerMagic : MonoBehaviour
     public float attackRange;
     public int damage;
     public Animator anim;
-
+    private bool kd;
     private bool mgc;
-
+    public float kdtimeorig;
+    private float kdtime;
     void Start()
     {
         button = GameObject.Find("Magic").GetComponent<Image>();
-
+        kd = false;
         if (PlayerPrefs.GetInt("BonusSoul") == 2)
         {
             count = 100;
@@ -37,52 +39,76 @@ public class PlayerMagic : MonoBehaviour
     }
     public void ZahvatSoulClicked()
     {
-        button.sprite = sprite1;
-        count++;
-        Debug.Log(count);
+        
+        {
+            button.sprite = sprite1;
+            count++;
+            Debug.Log(count);
+        }
+        
+
     }
     public void CastClicked()
     {
-        //нулевой
-        if ((count == 2) && (button.sprite == sprite1))
-        {
-            mgc = true;
-            button.sprite = sprite2;
-            knopka.interactable = false;
-            count = 0;
-        }
-        // 1 уровень
-        if ((count == 12) && (button.sprite == sprite1))
-        {
-            mgc = true;
-        }
-        if ((count == 13) && (button.sprite == sprite1))
-        {
-            mgc = true;
-            button.sprite = sprite2;
-            knopka.interactable = false;
-            count = 10;
-        }
-        // 2 уровень
-        if ((count == 102) && (button.sprite == sprite1))
-        {
-            mgc = true;
-        }
-        if ((count == 103) && (button.sprite == sprite1))
-        {
-            mgc = true;
-        }
-        if ((count == 104) && (button.sprite == sprite1))
-        {
-            mgc = true;
-            button.sprite = sprite2;
-            knopka.interactable = false;
-            count = 100;
-        }
+        
+            //нулевой
+            if ((count == 2) && (button.sprite == sprite1))
+            {
+                mgc = true;
+                button.sprite = sprite2;
+                knopka.interactable = false;
+                kd = true;
+                count = 0;
+            }
+            // 1 уровень
+            if ((count == 12) && (button.sprite == sprite1))
+            {
+                mgc = true;
+            }
+            if ((count == 13) && (button.sprite == sprite1))
+            {
+                mgc = true;
+                button.sprite = sprite2;
+                knopka.interactable = false;
+                kd = true;
+                count = 10;
+            }
+            // 2 уровень
+            if ((count == 102) && (button.sprite == sprite1))
+            {
+                mgc = true;
+            }
+            if ((count == 103) && (button.sprite == sprite1))
+            {
+                mgc = true;
+            }
+            if ((count == 104) && (button.sprite == sprite1))
+            {
+                mgc = true;
+                button.sprite = sprite2;
+                knopka.interactable = false;
+                kd = true;
+                count = 100;
+            }
+            
+        
     }
 
     void Update()
     {
+        if (kd == true)
+        {
+            knopka.interactable = false;
+            if (kdtime <= 0)
+            {
+                kd = false;
+                
+            }
+            kdtime = kdtimeorig;
+        }
+        else
+            kdtime -= Time.deltaTime;
+
         if (timeBtwAttack <= 0)
         {
             if (mgc == true)

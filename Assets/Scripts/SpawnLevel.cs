@@ -10,7 +10,7 @@ public class SpawnLevel : MonoBehaviour
 
     public RoomSpawner RSC;
 
-
+   
     void Start()
     {
         RoomBoosSpawned = false;
@@ -24,12 +24,6 @@ public class SpawnLevel : MonoBehaviour
         //  RSC.CountRoom(RoomCount);
         PlayerPrefs.SetInt("RC", RoomCount);
     }
-  //  private void Update()
-  //  {
-    //   if (RoomCount != 4)
-      //  {
-     //       RSC = GameObject.Find("Spawnpoint").GetComponent<RoomSpawner>();
-     //   }
-  //  }
+   
 
 }

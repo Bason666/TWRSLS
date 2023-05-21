@@ -12,6 +12,7 @@ TagManager:
   - Chest_Destroy
   - Rooms
   - Enemy
+  - Magic
   layers:
   - Default
   - TransparentFX

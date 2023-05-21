@@ -7,6 +7,7 @@ public class SoulCatch : MonoBehaviour
 {
     public Button MagicB;
     private int hp;
+    private bool cooldown;
     public Sprite texturka1;
     public Sprite texturka2;
     public Image button;
@@ -15,32 +16,34 @@ public class SoulCatch : MonoBehaviour
     {
         button = GameObject.Find("Magic").GetComponent<Image>();
     }
-    
+
     void Update()
     {
+        cooldown = GameObject.FindGameObjectWithTag("Magic").GetComponent<PlayerMagic>().kd;
 
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-           
-        if (collision.gameObject.GetComponent<Enemy>())
-        {
-            hp = (GameObject.FindGameObjectWithTag("Enemy").GetComponent<Enemy>().health);
-            if (hp <= 10)
+
+        if (cooldown == false)
+            if (collision.gameObject.GetComponent<Enemy>())
             {
-                MagicB.interactable = true;
+                hp = (GameObject.FindGameObjectWithTag("Enemy").GetComponent<Enemy>().health);
+                if (hp <= 10)
+                {
+                    MagicB.interactable = true;
+                }
+
             }
-   
-        }
-   
+
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.GetComponent<Enemy>())
         {
-            if(button.sprite == texturka1)
-            { 
+            if (button.sprite == texturka1)
+            {
                 MagicB.interactable = false;
             }
         }

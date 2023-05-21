@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour
     public bool Boss;
 
     private Animator anim;
+    private AddRoom room;
 
     private void Start()
     {
@@ -28,7 +29,7 @@ public class Enemy : MonoBehaviour
             bonus = 1;
         else
             bonus = 0;
-
+        room = GetComponentInParent<AddRoom>();
     }
     
     private void Update()

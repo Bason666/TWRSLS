@@ -27,7 +27,6 @@ public class RoomSpawner : MonoBehaviour
         Invoke("Spawn", 3f);
         Invoke("Started", 2f);
         Started();
-        Debug.Log(CR);
     }
 
     private void Started()

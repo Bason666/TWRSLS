@@ -89,6 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3492832361313654136}
   - component: {fileID: -3366846892579235827}
+  - component: {fileID: -633888416143180589}
   m_Layer: 0
   m_Name: LeftRighrt
   m_TagString: Untagged
@@ -145,6 +146,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 18.309105, y: 10.347944}
   m_EdgeRadius: 0
+--- !u!114 &-633888416143180589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3492832361313654135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e90a9a08e45141342bd664df12783876, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walls:
+  - {fileID: 3543929726490191520}
+  - {fileID: 3543929725413344312}
+  enemyTypes:
+  - {fileID: 1788621411038810051, guid: ea5ad5f57324b2e408f5e47448bfd345, type: 3}
+  enemySpawners: []
+  enemies: []
 --- !u!1001 &1334910477523026060
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -957,6 +977,11 @@ PrefabInstance:
 --- !u!4 &1860310965983467611 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3001700215473979705, guid: e6a1d384378160f449499031b9a40b3f, type: 3}
+  m_PrefabInstance: {fileID: 3492832360351603042}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3543929726490191520 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 96715009519402946, guid: e6a1d384378160f449499031b9a40b3f, type: 3}
   m_PrefabInstance: {fileID: 3492832360351603042}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3492832360394785910
@@ -2825,6 +2850,11 @@ PrefabInstance:
 --- !u!4 &1860310967060380355 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3001700215473979705, guid: e6a1d384378160f449499031b9a40b3f, type: 3}
+  m_PrefabInstance: {fileID: 3492832361428548602}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3543929725413344312 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 96715009519402946, guid: e6a1d384378160f449499031b9a40b3f, type: 3}
   m_PrefabInstance: {fileID: 3492832361428548602}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3492832361488193761

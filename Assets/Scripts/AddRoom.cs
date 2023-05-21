@@ -12,7 +12,6 @@ public class AddRoom : MonoBehaviour
     public Transform[] enemySpawners;
 
     [HideInInspector] public List<GameObject> enemies;
-
     private RoomVariants variants;
     private bool spawned;
     private bool wallsDestroyed;
@@ -40,13 +39,17 @@ public class AddRoom : MonoBehaviour
 
             }
             StartCoroutine(CheckEnemies());
+          //  Debug.Log("Pk");
         }
     }
     IEnumerator CheckEnemies()
     {
         yield return new WaitForSeconds(1f);
+        Debug.Log("Ну я и");
         yield return new WaitUntil(() => enemies.Count == 0);
+        Debug.Log("Я сработал");
         DestroyWalls();
+        Debug.Log("1");
     }
     public void DestroyWalls()
     {
@@ -54,8 +57,9 @@ public class AddRoom : MonoBehaviour
         {
             if (wall != null && wall.transform.childCount != 0)
             {
-                Instantiate(wall, wall.transform.position, Quaternion.identity);
+              //  Instantiate(wall, wall.transform.position, Quaternion.identity);
                 Destroy(wall);
+                Debug.Log("2");
             }
         }
         wallsDestroyed = true;
@@ -66,6 +70,7 @@ public class AddRoom : MonoBehaviour
         if (wallsDestroyed && other.CompareTag("Wall"))
         {
             Destroy(other.gameObject);
+            Debug.Log("3");
         }
     }
 }

@@ -17,7 +17,6 @@ public class SpawnLevel : MonoBehaviour
         RoomShopSpawned = false;
         RoomCount = 0;
         PlayerPrefs.SetInt("RC", 0);
-        Debug.Log("намскхк");
     }
     public void CountsRoom(int variable)
     {

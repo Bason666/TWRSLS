@@ -3499,11 +3499,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spawnpoint (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 36201000041467003, guid: 3d0801261dd78834f8442b39495b9b89, type: 3}
+      propertyPath: m_TagString
+      value: RoomPointSpawned
+      objectReference: {fileID: 0}
     - target: {fileID: 5659619089180918928, guid: 3d0801261dd78834f8442b39495b9b89, type: 3}
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2415664964665179965, guid: 3d0801261dd78834f8442b39495b9b89, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3d0801261dd78834f8442b39495b9b89, type: 3}
 --- !u!4 &3463907229982541336 stripped
 Transform:

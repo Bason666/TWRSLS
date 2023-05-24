@@ -13,7 +13,6 @@ public class RoomSpawner : MonoBehaviour
     private RoomVariants variants;
     private int rand;
     private bool spawned = false;
-    private float waitTime = 4f;
     private int CR;
 
     public SpawnLevel SLS;
@@ -23,86 +22,89 @@ public class RoomSpawner : MonoBehaviour
         
         variants = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomVariants>();
         SLS = GameObject.Find("Rooms").GetComponent<SpawnLevel>();
-        Destroy(gameObject, waitTime);
-        Invoke("Spawn", 3f);
-        Invoke("Started", 2f);
-        Started();
     }
 
-    private void Started()
+    private void Update()
     {
-        CR = PlayerPrefs.GetInt("RC");
+        SLS.RoomSpawn();
     }
-   // public void CountRoom(int RoomCount)
-  //  {
-  //      CR = Player;
-  //      Debug.Log("Ответ пришел");
-  //  }
 
-
-    public void Spawn()
+    public void MidleSpawn()
     {
-
         if (!spawned)
         {
-            if (CR <= 4)   // Первое кольцо
-           {
-              if (direction == Direction.Top)
-              {
+
+            if (direction == Direction.Top)
+            {
                 rand = Random.Range(0, variants.MidTopRoom.Length);
                 Instantiate(variants.MidTopRoom[rand], transform.position, variants.MidTopRoom[rand].transform.rotation);
-              }
-              else if (direction == Direction.Bottom)
-              {
+            }
+            else if (direction == Direction.Bottom)
+            {
                 rand = Random.Range(0, variants.MidBotRoom.Length);
                 Instantiate(variants.MidBotRoom[rand], transform.position, variants.MidBotRoom[rand].transform.rotation);
-              }
-              else if (direction == Direction.Right)
-              {
+            }
+            else if (direction == Direction.Right)
+            {
                 rand = Random.Range(0, variants.MidRightRoom.Length);
                 Instantiate(variants.MidRightRoom[rand], transform.position, variants.MidRightRoom[rand].transform.rotation);
-                }
-              else if (direction == Direction.Left)
-              {
+            }
+            else if (direction == Direction.Left)
+            {
                 rand = Random.Range(0, variants.MidLiftRoom.Length);
                 Instantiate(variants.MidLiftRoom[rand], transform.position, variants.MidLiftRoom[rand].transform.rotation);
-              }
-                SLS.CountsRoom(1);
-           }
+            }
+            spawned = true;
 
-            if (CR > 4) // Третье кольцо
+        }
+    }
+
+
+
+
+    public void EndSpawn()
+    {
+        if (!spawned)
+        {
+            if (direction == Direction.Top)
             {
-                if (direction == Direction.Top)
-                {
-                    rand = Random.Range(0, variants.topRooms.Length);
-                    Instantiate(variants.topRooms[rand], transform.position, variants.topRooms[rand].transform.rotation);
-                }
-                else if (direction == Direction.Bottom)
-                {
-                    rand = Random.Range(0, variants.bottomRooms.Length);
-                    Instantiate(variants.bottomRooms[rand], transform.position, variants.bottomRooms[rand].transform.rotation);
-                }
-                else if (direction == Direction.Right)
-                {
-                    rand = Random.Range(0, variants.rightRooms.Length);
-                    Instantiate(variants.rightRooms[rand], transform.position, variants.rightRooms[rand].transform.rotation);
-                }
-                else if (direction == Direction.Left)
-                {
-                    rand = Random.Range(0, variants.leftRooms.Length);
-                    Instantiate(variants.leftRooms[rand], transform.position, variants.leftRooms[rand].transform.rotation);
-                }
+                rand = Random.Range(0, variants.topRooms.Length);
+                Instantiate(variants.topRooms[rand], transform.position, variants.topRooms[rand].transform.rotation);
+            }
+            else if (direction == Direction.Bottom)
+            {
+                rand = Random.Range(0, variants.bottomRooms.Length);
+                Instantiate(variants.bottomRooms[rand], transform.position, variants.bottomRooms[rand].transform.rotation);
+            }
+            else if (direction == Direction.Right)
+            {
+                rand = Random.Range(0, variants.rightRooms.Length);
+                Instantiate(variants.rightRooms[rand], transform.position, variants.rightRooms[rand].transform.rotation);
+            }
+            else if (direction == Direction.Left)
+            {
+                rand = Random.Range(0, variants.leftRooms.Length);
+                Instantiate(variants.leftRooms[rand], transform.position, variants.leftRooms[rand].transform.rotation);
             }
             spawned = true;
         }
     }
 
 
-    private void OnTriggerStay2D(Collider2D other)
+
+
+    public void Destroy()
     {
-        if (other.CompareTag("RoomPoint") && other.GetComponent<RoomSpawner>().spawned)
+        Destroy(gameObject);
+
+    }
+
+
+   private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.CompareTag("RoomPointSpawned"))
         {
             Destroy(gameObject);
-        }
+       }
     }
 }

@@ -13,6 +13,7 @@ TagManager:
   - Rooms
   - Enemy
   - Magic
+  - RoomPointSpawned
   layers:
   - Default
   - TransparentFX

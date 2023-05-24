@@ -292,7 +292,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spawnpoint (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 36201000041467003, guid: 3d0801261dd78834f8442b39495b9b89, type: 3}
+      propertyPath: m_TagString
+      value: RoomPointSpawned
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: -2415664964665179965, guid: 3d0801261dd78834f8442b39495b9b89, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3d0801261dd78834f8442b39495b9b89, type: 3}
 --- !u!4 &947184081947638601 stripped
 Transform:
@@ -3503,7 +3508,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4031237898571333607, guid: 2b73c5259c8bd764d9b903ff74c799f3, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.5866
       objectReference: {fileID: 0}
     - target: {fileID: 4031237898571333607, guid: 2b73c5259c8bd764d9b903ff74c799f3, type: 3}
       propertyPath: m_LocalScale.z
@@ -3511,11 +3516,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4031237898571333607, guid: 2b73c5259c8bd764d9b903ff74c799f3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 3.86
       objectReference: {fileID: 0}
     - target: {fileID: 4031237898571333607, guid: 2b73c5259c8bd764d9b903ff74c799f3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.0767
       objectReference: {fileID: 0}
     - target: {fileID: 4031237898571333607, guid: 2b73c5259c8bd764d9b903ff74c799f3, type: 3}
       propertyPath: m_LocalPosition.z

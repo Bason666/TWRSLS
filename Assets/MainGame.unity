@@ -4125,6 +4125,17 @@ MonoBehaviour:
   - {fileID: 3492832361313654135, guid: 19250fc72d13778498952c9cbf911da4, type: 3}
   - {fileID: 3492832361313654135, guid: 9d65b01c9809ce74185e69251866cf26, type: 3}
   - {fileID: 3492832361313654135, guid: 75d0d305e0660834e9dc60bcc4d7ed7b, type: 3}
+  ChestRoom:
+  - {fileID: 3492832361313654135, guid: 8bee178756ffa764baf7eb395617dafc, type: 3}
+  - {fileID: 3492832361313654135, guid: 454caa1851309974782a52564965d058, type: 3}
+  - {fileID: 3492832361313654135, guid: f8025d2dd6ea4bf44bd436feb7138cc8, type: 3}
+  - {fileID: 3492832361313654135, guid: 7d0c5439ab47b44459733dd7a123f232, type: 3}
+  ShopRoom:
+  - {fileID: 3492832361313654135, guid: d3ba58691ced25b4fbb234e44bb31bcc, type: 3}
+  - {fileID: 3492832361313654135, guid: e777756d3b52b6e42bcfd4969779cc47, type: 3}
+  - {fileID: 3492832361313654135, guid: e2663d0bf3ccafd4186cd4d89fb93963, type: 3}
+  - {fileID: 3492832361313654135, guid: ace2633dad5bffb4cbc5caab36edc8d3, type: 3}
+  BossRoom: []
 --- !u!4 &1680041050
 Transform:
   m_ObjectHideFlags: 0
@@ -4152,8 +4163,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edc7b52b63bfa124f8d31cca9e7757a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RoomBoosSpawned: 0
-  RoomShopSpawned: 0
   RoomCount: 0
   RSC: {fileID: 0}
   startTimeBtwAttack: 3

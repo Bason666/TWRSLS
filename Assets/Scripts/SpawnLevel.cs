@@ -29,9 +29,8 @@ public class SpawnLevel : MonoBehaviour
     {
         if (Timer == true)
         {
-            Debug.Log(RoomCount);
             RSC = GameObject.FindWithTag("RoomPoint").GetComponent<RoomSpawner>();
-            if (RoomCount < 4)
+            if (RoomCount < 6)
             {
                 RSC.MidleSpawn();
             }
@@ -39,12 +38,12 @@ public class SpawnLevel : MonoBehaviour
             {
                 RSC.EndSpawn();
             }
-            if ((RoomCount >= 4) && (!RoomChestSpawned))
+            if ((RoomCount >= 6) && (!RoomChestSpawned))
             {
                 RSC.ChestSpawn();
                 RoomChestSpawned = true;
             }
-            else if ((RoomCount >=4) && (!RoomShopSpawned))
+            else if ((RoomCount >=6) && (!RoomShopSpawned))
             {
                 RSC.ShopSpawn();
                 RoomShopSpawned = true;

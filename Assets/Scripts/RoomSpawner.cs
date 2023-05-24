@@ -12,7 +12,6 @@ public class RoomSpawner : MonoBehaviour
     }
     private RoomVariants variants;
     private int rand;
-    private bool spawned = false;
     private int CR;
 
     public SpawnLevel SLS;
@@ -31,8 +30,8 @@ public class RoomSpawner : MonoBehaviour
 
     public void MidleSpawn()
     {
-        if (!spawned)
-        {
+        
+        
 
             if (direction == Direction.Top)
             {
@@ -54,18 +53,38 @@ public class RoomSpawner : MonoBehaviour
                 rand = Random.Range(0, variants.MidLiftRoom.Length);
                 Instantiate(variants.MidLiftRoom[rand], transform.position, variants.MidLiftRoom[rand].transform.rotation);
             }
-            spawned = true;
+            
 
-        }
+        
     }
-
-
+    public void ChestSpawn()
+    {
+        if (direction == Direction.Top)
+            Instantiate(variants.ChestRoom[3], transform.position, variants.ChestRoom[3].transform.rotation);
+        else if (direction == Direction.Bottom)
+            Instantiate(variants.ChestRoom[0], transform.position, variants.ChestRoom[0].transform.rotation);
+        else if (direction == Direction.Right)
+            Instantiate(variants.ChestRoom[2], transform.position, variants.ChestRoom[2].transform.rotation);
+        else if (direction == Direction.Left)
+            Instantiate(variants.ChestRoom[1], transform.position, variants.ChestRoom[1].transform.rotation);
+    }
+    public void ShopSpawn()
+    {
+        if (direction == Direction.Top)
+            Instantiate(variants.ShopRoom[3], transform.position, variants.ShopRoom[3].transform.rotation);
+        else if (direction == Direction.Bottom)
+            Instantiate(variants.ShopRoom[0], transform.position, variants.ShopRoom[0].transform.rotation);
+        else if (direction == Direction.Right)
+            Instantiate(variants.ShopRoom[2], transform.position, variants.ShopRoom[2].transform.rotation);
+        else if (direction == Direction.Left)
+            Instantiate(variants.ShopRoom[1], transform.position, variants.ShopRoom[1].transform.rotation);
+    }
 
 
     public void EndSpawn()
     {
-        if (!spawned)
-        {
+        
+        
             if (direction == Direction.Top)
             {
                 rand = Random.Range(0, variants.topRooms.Length);
@@ -86,8 +105,7 @@ public class RoomSpawner : MonoBehaviour
                 rand = Random.Range(0, variants.leftRooms.Length);
                 Instantiate(variants.leftRooms[rand], transform.position, variants.leftRooms[rand].transform.rotation);
             }
-            spawned = true;
-        }
+           
     }
 
 

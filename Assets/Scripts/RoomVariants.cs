@@ -14,4 +14,8 @@ public class RoomVariants : MonoBehaviour
     public GameObject[] MidBotRoom;
     public GameObject[] MidRightRoom;
     public GameObject[] MidLiftRoom;
+
+    public GameObject[] ChestRoom;
+    public GameObject[] ShopRoom;
+    public GameObject[] BossRoom;
 }

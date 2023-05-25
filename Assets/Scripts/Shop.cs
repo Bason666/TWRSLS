@@ -5,11 +5,13 @@ using UnityEngine;
 public class Shop : MonoBehaviour
 {
     private Player player;
-    public Canvas canvas;
-    // Start is called before the first frame update
+    private Canvas canvas;
+    private ExitShop spawn;
     void Start()
     {
         canvas =  GameObject.Find("Shop").GetComponent<Canvas>();
+        spawn = GameObject.Find("Shop").GetComponent<ExitShop>();
+        spawn.Spawned();
     }
 
    public void OnTriggerEnter2D(Collider2D other)

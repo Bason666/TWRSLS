@@ -140,9 +140,7 @@ MonoBehaviour:
   - {fileID: 0}
   enemyTypes:
   - {fileID: 1788621411038810051, guid: ea5ad5f57324b2e408f5e47448bfd345, type: 3}
-  enemySpawners:
-  - {fileID: 0}
-  - {fileID: 0}
+  enemySpawners: []
   enemies: []
 --- !u!1001 &26630079890695976
 PrefabInstance:

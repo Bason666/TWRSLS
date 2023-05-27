@@ -13,12 +13,10 @@ public class RoomSpawner : MonoBehaviour
     private RoomVariants variants;
     private int rand;
     private int CR;
-
     public SpawnLevel SLS;
 
     private void Start()
     {
-        
         variants = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomVariants>();
         SLS = GameObject.Find("Rooms").GetComponent<SpawnLevel>();
     }

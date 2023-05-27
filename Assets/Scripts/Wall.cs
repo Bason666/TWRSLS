@@ -8,12 +8,13 @@ public class Wall : MonoBehaviour
 
     private void OnTriggerStay2D (Collider2D other)
     {
-        if (other.CompareTag("Block"))
-            Debug.Log("«¿Ã≈Õ» Ã≈Õﬂ");
+        Debug.Log(other);
+       // if (other.CompareTag("Block"))
+          //  Debug.Log("«¿Ã≈Õ» Ã≈Õﬂ");
       //  {
-       //     Instantiate(block, transform.GetChild(0).position, Quaternion.identity);
-       //     Instantiate(block, transform.GetChild(1).position, Quaternion.identity);
-       //     Destroy(gameObject);
-      //  }
+          //  Instantiate(block, transform.GetChild(0).position, Quaternion.identity);
+         // Instantiate(block, transform.GetChild(1).position, Quaternion.identity);
+          //  Destroy(gameObject);
+       // }
     }
 }

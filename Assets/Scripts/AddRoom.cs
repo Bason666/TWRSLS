@@ -53,7 +53,7 @@ public class AddRoom : MonoBehaviour
         {
             if (wall != null && wall.transform.childCount != 0)
             {
-              //  Instantiate(wall, wall.transform.position, Quaternion.identity);
+                //  Instantiate(wall, wall.transform.position, Quaternion.identity);
                 Destroy(wall);
             }
         }
@@ -62,7 +62,7 @@ public class AddRoom : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (wallsDestroyed && other.CompareTag("Wall"))
+        if ((wallsDestroyed) && other.CompareTag("Wall"))
         {
             Destroy(other.gameObject);
         }

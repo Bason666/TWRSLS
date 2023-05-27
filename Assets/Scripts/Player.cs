@@ -23,6 +23,8 @@ public class Player : MonoBehaviour
     public Image heart2;
     public Image heart1;
 
+    private bool facingRight = true;
+
     int MaxHealth;
     int ms;
     int gold;
@@ -168,16 +170,13 @@ public class Player : MonoBehaviour
             heart1.enabled = false;
         else
             heart1.enabled = true;
-        
     }
-
-
-
-
-
-
-
-
-
+    private void Flip()
+    {
+        facingRight = !facingRight;
+        Vector3 Scaler = transform.localScale;
+        Scaler.x *= -1;
+        transform.localScale = Scaler;
+    }
 
 }

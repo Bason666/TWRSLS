@@ -48,11 +48,14 @@ public class SpawnLevel : MonoBehaviour
                 RSC.ShopSpawn();
                 RoomShopSpawned = true;
             }
+            else if ((RoomCount >= 6) && (!RoomBoosSpawned))
+            {
+                RSC.BossSpawn();
+                RoomBoosSpawned = true;
+            }
             Timer = false;
             CountsRoom(1);
             RSC.Destroy();
-
-
 
         }
     }

@@ -78,7 +78,11 @@ public class Enemy : MonoBehaviour
                         anim.SetTrigger("EnemyAttack");
                 }
                 else
+                {
                     anim.SetTrigger("EnemyAttack");
+                    Debug.Log("Ответка на анимацию");
+                }
+                timeBtwAttack = startTimeBtwAttack;
             }
             else
             {
@@ -89,6 +93,7 @@ public class Enemy : MonoBehaviour
 
     public void OnEnemyAttack()
     {
+        Debug.Log("Враг атакует");
         timeBtwAttack = startTimeBtwAttack;
         player.GetComponent<Player>().ChangeHealth(-enemyDamage);
     }

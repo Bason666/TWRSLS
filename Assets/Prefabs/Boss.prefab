@@ -173,7 +173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 150
   speed: 2
-  enemyDamage: 1
+  enemyDamage: 10
   startTimeBtwAttack: 3
   igrok:
     serializedVersion: 2

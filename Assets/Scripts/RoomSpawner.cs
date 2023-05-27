@@ -77,7 +77,17 @@ public class RoomSpawner : MonoBehaviour
         else if (direction == Direction.Left)
             Instantiate(variants.ShopRoom[1], transform.position, variants.ShopRoom[1].transform.rotation);
     }
-
+    public void BossSpawn()
+    {
+        if (direction == Direction.Top)
+            Instantiate(variants.BossRoom[0], transform.position, variants.BossRoom[0].transform.rotation);
+        else if (direction == Direction.Bottom)
+            Instantiate(variants.BossRoom[3], transform.position, variants.BossRoom[3].transform.rotation);
+        else if (direction == Direction.Right)
+            Instantiate(variants.BossRoom[1], transform.position, variants.BossRoom[1].transform.rotation);
+        else if (direction == Direction.Left)
+            Instantiate(variants.BossRoom[2], transform.position, variants.BossRoom[2].transform.rotation);
+    }
 
     public void EndSpawn()
     {

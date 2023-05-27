@@ -8,7 +8,6 @@ public class Wall : MonoBehaviour
 
     private void OnTriggerStay2D (Collider2D other)
     {
-        Debug.Log(other);
        // if (other.CompareTag("Block"))
           //  Debug.Log("«¿Ã≈Õ» Ã≈Õﬂ");
       //  {

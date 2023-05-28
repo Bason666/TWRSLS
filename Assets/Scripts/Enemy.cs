@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
 {
     public int health;
     public float speed;
+    private float stopTime;
     private Player player;
     int coins;
     int bonus;
@@ -16,6 +17,8 @@ public class Enemy : MonoBehaviour
     public LayerMask igrok;
     public bool Boss;
 
+    [HideInInspector] public bool playerNotInRoom;
+    private bool stoped;
     private Animator anim;
     private AddRoom room;
 
@@ -34,7 +37,21 @@ public class Enemy : MonoBehaviour
     
     private void Update()
     {
-    
+        if (!playerNotInRoom)
+        {
+            if (stopTime <= 0)
+            {
+                stoped = false;
+            }
+            else
+            {
+                stoped = true;
+            }
+        }
+        else
+        {
+            stoped = true;
+        }
 
         if (health <= 0)
         {
@@ -55,7 +72,7 @@ public class Enemy : MonoBehaviour
                 coins = 0;
             }
         }
-       
+       if(!stoped)
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
 
     }

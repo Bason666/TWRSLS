@@ -40,6 +40,24 @@ public class AddRoom : MonoBehaviour
             }
             StartCoroutine(CheckEnemies());
         }
+        else if(other.CompareTag("Player")&& spawned)
+        {
+            foreach(GameObject enemy in enemies)
+            {
+                enemy.GetComponent<Enemy>().playerNotInRoom = false;
+            }
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+         if (other.CompareTag("Player") && spawned)
+        {
+            foreach (GameObject enemy in enemies)
+            {
+                enemy.GetComponent<Enemy>().playerNotInRoom = true;
+            }
+        }
+
     }
     IEnumerator CheckEnemies()
     {

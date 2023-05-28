@@ -91,8 +91,14 @@ public class Player : MonoBehaviour
         else
             PlayerPrefs.SetInt("ggDead", 0);
 
-
-
+        if(!facingRight && moveInput.x > 0)
+        {
+            Flip();
+        }
+        else if(facingRight && moveInput.x < 0)
+        {
+            Flip();
+        }
 
     }
 

@@ -10,7 +10,7 @@ public class Volume_Setting : MonoBehaviour
 
     public Image volum;
     public AudioSource Musc;
-    public bool MuscOn;
+    public static bool MuscOn;
     void Start()
     {
         MuscOn = true;

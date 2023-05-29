@@ -616,7 +616,6 @@ MonoBehaviour:
   Volume_Off: {fileID: 21300000, guid: d1997f032fd47bc4bb3f9fbc3265f0bc, type: 3}
   volum: {fileID: 1504748586}
   Musc: {fileID: 650932690}
-  MuscOn: 1
 --- !u!82 &650932690
 AudioSource:
   m_ObjectHideFlags: 0
@@ -627,7 +626,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: af4b07db02a7cea4ca181579163f6df2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 36fb9c7e46a543b4bb08b1f3f939cd15, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

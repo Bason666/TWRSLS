@@ -34,7 +34,7 @@ public class SpawnLevel : MonoBehaviour
             {
                 RSC.MidleSpawn();
             }
-            if ((RoomCount >= 4) && (RoomChestSpawned) && (RoomShopSpawned))
+            if ((RoomCount >= 4) && (RoomChestSpawned) && (RoomShopSpawned) && (RoomBoosSpawned))
             {
                 RSC.EndSpawn();
             }

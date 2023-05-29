@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnPointChecked : MonoBehaviour
 {
-    private float WaitTime = 3f;
+    private float WaitTime = 4f;
 
 
     void Start()

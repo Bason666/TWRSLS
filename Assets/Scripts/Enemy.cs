@@ -21,6 +21,7 @@ public class Enemy : MonoBehaviour
     private bool stoped;
     private Animator anim;
     private AddRoom room;
+    private NextLevel nl;
 
     private void Start()
     {
@@ -33,6 +34,7 @@ public class Enemy : MonoBehaviour
         else
             bonus = 0;
         room = GetComponentInParent<AddRoom>();
+        nl = GetComponentInParent<NextLevel>();
     }
     
     private void Update()
@@ -56,13 +58,14 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
-            room.enemies.Remove(gameObject);
+            
             if (!Boss)
             {
                 coins = PlayerPrefs.GetInt("money");
                 coins += 5 + bonus;
                 PlayerPrefs.SetInt("money", coins);
                 coins = 0;
+                room.enemies.Remove(gameObject);
             }
             else
             {
@@ -70,6 +73,7 @@ public class Enemy : MonoBehaviour
                 coins += 15 ;
                 PlayerPrefs.SetInt("experience", coins);
                 coins = 0;
+                nl.enemies.Remove(gameObject);
             }
         }
        if(!stoped)
@@ -96,10 +100,10 @@ public class Enemy : MonoBehaviour
                 }
                 else
                 {
+                    timeBtwAttack = startTimeBtwAttack;
                     anim.SetTrigger("EnemyAttack");
                     Debug.Log("Ответка на анимацию");
                 }
-                timeBtwAttack = startTimeBtwAttack;
             }
             else
             {

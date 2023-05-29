@@ -101,14 +101,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a1bb0ac533636241806a24b0971dd81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 1
   speed: 3
-  enemyDamage: 10
+  enemyDamage: 1
   startTimeBtwAttack: 2
   igrok:
     serializedVersion: 2
     m_Bits: 64
   Boss: 0
+  playerNotInRoom: 0
 --- !u!58 &1788621411038810055
 CircleCollider2D:
   m_ObjectHideFlags: 0

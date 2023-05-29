@@ -19,7 +19,6 @@ public class ChestImage : MonoBehaviour
         if(CompareTag("Chest_Destroy"))
         {
             spriteRender.sprite = dc;
-
         }
 
     }

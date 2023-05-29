@@ -5374,7 +5374,7 @@ MonoBehaviour:
   joystick: {fileID: 726302805}
   animator: {fileID: 2090052461}
   TagForChest: Chest_Destroy
-  health: 30
+  health: 500
   heart5: {fileID: 5137256}
   heart4: {fileID: 1789353954}
   heart3: {fileID: 1413662033}

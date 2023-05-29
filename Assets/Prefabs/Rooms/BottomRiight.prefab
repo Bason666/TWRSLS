@@ -165,6 +165,7 @@ MonoBehaviour:
   - {fileID: 3543929726490191520}
   enemyTypes:
   - {fileID: 1788621411038810051, guid: ea5ad5f57324b2e408f5e47448bfd345, type: 3}
+  - {fileID: 618261512339040660, guid: 3facdff75c1dc8047a75720b8d36af4b, type: 3}
   enemySpawners:
   - {fileID: 7313155708386862093}
   - {fileID: 8631226616255658621}

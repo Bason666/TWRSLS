@@ -79,6 +79,17 @@ public class Enemy : MonoBehaviour
        if(!stoped)
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
 
+       if (player.transform.position.x > transform.position.x)
+       {
+            transform.eulerAngles = new Vector3(0, 180, 0); ;
+       }
+       else
+        {
+            transform.eulerAngles = new Vector3(0, 0, 0); ;
+        }
+
+
+
     }
 
     public void OnTriggerStay2D(Collider2D other)
@@ -92,7 +103,7 @@ public class Enemy : MonoBehaviour
                     int Rand = Random.Range(0, 11);
                     if (Rand == 1)
                     {
-                        Debug.Log("Ульта босса");
+                        anim.SetTrigger("BossAttack");
                         timeBtwAttack = startTimeBtwAttack;
                     }
                     else
@@ -102,7 +113,6 @@ public class Enemy : MonoBehaviour
                 {
                     timeBtwAttack = startTimeBtwAttack;
                     anim.SetTrigger("EnemyAttack");
-                    Debug.Log("Ответка на анимацию");
                 }
             }
             else
@@ -114,7 +124,6 @@ public class Enemy : MonoBehaviour
 
     public void OnEnemyAttack()
     {
-        Debug.Log("Враг атакует");
         timeBtwAttack = startTimeBtwAttack;
         player.GetComponent<Player>().ChangeHealth(-enemyDamage);
     }
@@ -127,9 +136,8 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
-
     }
-
+   
 
 
 

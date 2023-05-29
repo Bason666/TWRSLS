@@ -14,19 +14,23 @@ public class Vorota : MonoBehaviour
     {
         spriteRender = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        db = false;
     }
 
 
    public void BossDead(bool x)
     {
         db = x;
+        if (db)
+        {
+            spriteRender.sprite = dver2;
+            anim.SetTrigger("BossDead");
+        }
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if ((other.CompareTag("Player")) && db)
         {
-            spriteRender.sprite = dver2;
-            anim.SetTrigger("BossDead");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
